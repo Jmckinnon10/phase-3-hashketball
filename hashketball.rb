@@ -1,4 +1,5 @@
 # Write your code below game_hash
+
 def game_hash
   {
     home: {
@@ -126,4 +127,24 @@ def game_hash
   }
 end
 
-# Write code here
+# points = game_hash[:home][:players].map{|point| point [:points]}.sum
+
+# puts points
+# def all_players
+#   game_hash[:home][:players] + game_hash[:away][:players]
+# end
+
+def num_points_scored
+  home_points = game_hash[:home][:players][:player_name].map{|point| point [:points]}
+  away_points = game_hash[:away][:players][:player_name].map{|point| point [:points]}
+  home_points + away_points
+end
+
+puts num_points_scored
+
+
+binding.pry
+
+
+
+
